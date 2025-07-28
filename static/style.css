@@ -1,0 +1,105 @@
+/* Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Full-screen dark background */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #1e1e2f, #2c2c3e);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #f0f0f0;
+}
+
+/* Centered container that fits screen */
+.container {
+    background: #2a2a3b;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.6);
+    width: 95%;
+    max-width: 500px;
+    height: 95vh;           /* Fit almost entire screen */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Spread form & result */
+}
+
+/* Title */
+h2 {
+    text-align: center;
+    color: #00c6ff;
+    margin-bottom: 5px;
+    font-size: 22px;
+}
+
+/* Subtitle */
+p {
+    text-align: center;
+    color: #bbb;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+/* Labels */
+label {
+    display: block;
+    margin-top: 6px;
+    font-weight: 500;
+    color: #ddd;
+    font-size: 14px;
+}
+
+/* Inputs */
+input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 4px;
+    border-radius: 6px;
+    border: 1px solid #444;
+    background: #1e1e2f;
+    color: #f0f0f0;
+    font-size: 13px;
+}
+
+input:focus {
+    border-color: #00c6ff;
+    outline: none;
+}
+
+/* Button */
+button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 15px;
+    background: linear-gradient(90deg, #00c6ff, #0072ff);
+    color: white;
+    font-size: 15px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: transform 0.2s ease, background 0.3s ease;
+}
+
+button:hover {
+    transform: scale(1.04);
+    background: linear-gradient(90deg, #188053, #188053);
+}
+
+/* Prediction result */
+.result {
+    margin-top: 12px;
+    padding: 10px;
+    background: #1f1f2e;
+    border-radius: 6px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    color: #188053;
+}
