@@ -43,7 +43,33 @@ git push origin to main
 2)
 * Creating a Flask Web Application for the Project
 Make sure you have files like pickles(xgb_hy and standardization)
+or json format
+```
+XGBoost Model
+```
 
-* Download Postman for testing the web application
+* Download Postman for testing the web application(if you need to test)Otherwise
 
-* 
+* Create create css and js files and home.html for the project
+```
+home.html
+script.js
+style.css
+```
+
+* Created gunicorn (to handle mutiple requests at a time act as WSGI) by creating Procfile( "web: gunicorn app:app") in it.
+```
+web: gunicorn app:app
+```
+
+* Deployment in Heruko
+
+* Dockerize the entire project using Docker
+```
+FROM
+COPY
+WORKDIR
+RUN
+EXPOSE
+CMD
+```
