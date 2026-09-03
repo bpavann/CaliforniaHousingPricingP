@@ -1,75 +1,58 @@
-# CaliforniaHousingPricingP
-House Price Prediction
+# California Housing Price Prediction
 
-1.[GitHub](http://github.com)
+An end-to-end machine learning project that predicts California housing prices using housing, demographic, and geographic features.
 
-2.[VSCODE](http://code.visualstudio.com)
+## Project Overview
 
-3.[Gitcli](https://cli.github.com/)
+Built a regression pipeline covering data preprocessing, feature engineering, model training, evaluation, model selection, and deployment integration.
 
-4.[Heruku](https://www.heroku.com/)
+Two ensemble regression models were developed and compared:
 
-5.[Google Colab](https://colab.google/)
+* **Random Forest Regressor**
+* **XGBoost Regressor**
 
-6.[Docker](https://www.docker.com/)
- 
-1)
-* Creating environment in conda
-```
-conda create -p venv python==3.8 -y
+The models were evaluated using **MAE, MSE, RMSE, R², and Adjusted R²**.
 
-```
-* Activate Environment
-```
-conda activate venv/
-```
-* Install all the libraries by creating requirements.txt and listing all the required libraries and run this command
-```
-pip install -r requirements.txt
-```
-* Add Configuration with name and email for that run this command in the same env
-```
-git config --global user.name
-git config --global user.email
-```
+## Model Results
 
-* Now try to add,(status) commit and push into Github Repo
-```
-git add .
-git status
-git commit -m "___"
-git push origin to main
-```
-2)
-* Creating a Flask Web Application for the Project
-Make sure you have files like pickles(xgb_hy and standardization)
-or json format
-```
-XGBoost Model
-```
+| Model         |   Test MAE |  Test RMSE |    Test R² |
+| ------------- | ---------: | ---------: | ---------: |
+| Random Forest |     0.3281 |     0.5037 |     0.8064 |
+| **XGBoost**   | **0.2974** | **0.4508** | **0.8449** |
 
-* Download Postman for testing the web application(if you need to test)Otherwise
+**XGBoost was selected as the final model** because it achieved better performance on the test dataset, with lower MAE/RMSE and higher R² than Random Forest.
 
-* Create create css and js files and home.html for the project
-```
-home.html
-script.js
-style.css
-```
+## Key Features
 
-* Created gunicorn (to handle mutiple requests at a time act as WSGI) by creating Procfile( "web: gunicorn app:app") in it.
-```
-web: gunicorn app:app
-```
+* Data preprocessing and feature engineering
+* Regression model development
+* Random Forest and XGBoost model comparison
+* Evaluation using multiple regression metrics
+* XGBoost model selection based on test performance
+* Trained model serialization for inference
+* Flask-based prediction application
+* REST prediction endpoint
+* Docker containerization
+* Gunicorn-based application serving
 
-* Deployment in Heruko
+## Technology Stack
 
-* Dockerize the entire project using Docker
-```
-FROM
-COPY
-WORKDIR
-RUN
-EXPOSE
-CMD
+**Python · Scikit-learn · XGBoost · Pandas · NumPy · Flask · HTML/CSS/JavaScript · Docker · Gunicorn · Git/GitHub**
+
+## Project Structure
+
+```text
+CaliforniaHousingPricingP/
+│
+├── static/
+├── templates/
+├── CaliforniaHousingPricing_ML_Project.ipynb
+├── app.py
+├── Dockerfile
+├── Procfile
+├── requirements.txt
+├── scaler_params.json
+├── xgb_hy.pkl
+├── xgb_hy.json
+└── README.md
 ```

@@ -1,6 +1,6 @@
 import pickle
 from flask import Flask,request,jsonify,render_template,app,redirect,url_for
-import numpy as np
+import numfunpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 import xgboost as xgb
