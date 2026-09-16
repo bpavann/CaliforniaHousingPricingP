@@ -3,7 +3,4 @@ COPY . /app
 WORKDIR /app
 RUN pip install -r requirements.txt
 EXPOSE $PORT
-CMD gunicorn --bind 0.0.0:$PORT app:app
-# Use the environment variable PORT to specify the port number
-# Use gunicorn to serve the app
-# Use the app module to run the app
+CMD ["gunicorn --bind 0.0.0.0:${PORT:-5000} app:app"]

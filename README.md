@@ -39,20 +39,3 @@ The models were evaluated using **MAE, MSE, RMSE, R², and Adjusted R²**.
 
 **Python · Scikit-learn · XGBoost · Pandas · NumPy · Flask · HTML/CSS/JavaScript · Docker · Gunicorn · Git/GitHub**
 
-## Project Structure
-
-```text
-CaliforniaHousingPricingP/
-│
-├── static/
-├── templates/
-├── CaliforniaHousingPricing_ML_Project.ipynb
-├── app.py
-├── Dockerfile
-├── Procfile
-├── requirements.txt
-├── scaler_params.json
-├── xgb_hy.pkl
-├── xgb_hy.json
-└── README.md
-```
